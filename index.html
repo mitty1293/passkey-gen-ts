@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+	<head>
+        <!-- Required meta tags -->
+		<meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+		<!-- Bootstrap CSS -->
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
+        <title>passkey-gen-flask</title>
+    </head>
+    <body>
+        <!-- navbar -->
+        <nav class="navbar navbar-dark bg-secondary">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="/">passkey-gen-flask</a>
+            </div>
+        </nav>
+		<!-- contents -->
+        <label for="input_data">入力データ</label>
+        <div class="input-group">
+            <input type="text" id="input_data" name="input_data" class="form-control" placeholder="変換したいデータを入力してください">
+            <button class="btn btn-outline-secondary" type="button" id="gen_btn">generate</button>
+        </div>
+        <label for="output_data">出力データ</label>
+        <div class="input-group">
+            <input type="text" id="output_data" name="output_data" class="form-control" placeholder="変換されたデータが出力されます" readonly>
+            <button class="btn btn-outline-secondary" type="button" id="copy_btn">copy</button>
+        </div>
+        <!-- custum JS -->
+		<script src="main.js"></script>
+        <!-- Bootstrap Bundle with Popper -->
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW" crossorigin="anonymous"></script>
+    </body>
+</html>
