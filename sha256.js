@@ -1,3 +1,3 @@
-export const generate_hash = () => {
-    return "123";
+export const generate_hash = (txt) => {
+    return "test" + txt + "test";
 };
