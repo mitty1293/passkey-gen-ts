@@ -4,6 +4,7 @@ const copy_btn = document.getElementById("copy_btn");
 const input_txt = document.getElementById("input_data");
 const output_txt = document.getElementById("output_data");
 
+// function
 function generate(){
     output_txt.value = input_txt.value;
 }
