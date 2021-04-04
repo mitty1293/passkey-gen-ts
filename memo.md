@@ -91,7 +91,7 @@ dist  node_modules  package-lock.json  package.json  src  tsconfig.json
     "esModuleInterop": true,
     "skipLibCheck": true,
     "forceConsistentCasingInFileNames": true
-  }
+  },
   "include": [
       "src/**/*"
   ]
