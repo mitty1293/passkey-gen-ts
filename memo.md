@@ -114,3 +114,10 @@ https://qiita.com/reflet/items/538753d5dcf3560567a9
 https://future-architect.github.io/typescript-guide/deploy.html#docker
 
 https://future-architect.github.io/typescript-guide/ecosystem.html
+
+## テスト用（test.js　sha256のjsと同じdistディレクトリに入れる）
+`node test.js 文字列`で実行
+```
+const aaa = require('./hash');
+console.log(aaa.computeHash(process.argv[2]));
+```
