@@ -105,3 +105,12 @@ dist  node_modules  package-lock.json  package.json  src  tsconfig.json
 https://maku.blog/p/27m3brm/
 ## 設定例
 https://qiita.com/reflet/items/538753d5dcf3560567a9
+
+
+memo
+
+以下見ながらdockerfileに落とし込む
+
+https://future-architect.github.io/typescript-guide/deploy.html#docker
+
+https://future-architect.github.io/typescript-guide/ecosystem.html
