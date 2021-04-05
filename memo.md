@@ -121,3 +121,14 @@ https://future-architect.github.io/typescript-guide/ecosystem.html
 const aaa = require('./hash');
 console.log(aaa.computeHash(process.argv[2]));
 ```
+
+
+# テスト結果
+```
+root@281e11ffea5b:/usr/local/apache2/htdocs# ls
+dist  index.html
+root@281e11ffea5b:/usr/local/apache2/htdocs# cd dist
+root@281e11ffea5b:/usr/local/apache2/htdocs/dist# ls
+compute_hash.js  compute_hash.js.map  main.js
+```
+何故かこれでできない。
