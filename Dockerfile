@@ -4,7 +4,8 @@ WORKDIR app
 COPY package.json package-lock.json ./
 RUN npm ci
 COPY tsconfig.json ./
-COPY ts dist ./
+COPY ts/ ./ts/
+COPY dist/ ./dist/
 RUN npm run build
 
 # runner
