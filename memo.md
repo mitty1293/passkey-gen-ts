@@ -132,3 +132,4 @@ root@281e11ffea5b:/usr/local/apache2/htdocs/dist# ls
 compute_hash.js  compute_hash.js.map  main.js
 ```
 何故かこれでできない。
+index.html,compute_hash.js,main.jsをindexコンテナ等に移して実行できるか試す。
