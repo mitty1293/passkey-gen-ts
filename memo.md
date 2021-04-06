@@ -83,8 +83,8 @@ dist  node_modules  package-lock.json  package.json  src  tsconfig.json
 ```json
 {
   "compilerOptions": {
-    "target": "ES2019",     /*←追記*/
-    "module": "commonjs",
+    "target": "ES2020",     /*←追記*/
+    "module": "es2020",
     "sourceMap": true,      /*←追記*/
     "outDir": "./dist",         /*←追記*/
     "strict": true,
@@ -104,8 +104,10 @@ dist  node_modules  package-lock.json  package.json  src  tsconfig.json
 ## 設定の説明
 https://maku.blog/p/27m3brm/
 ## 設定例
-https://qiita.com/reflet/items/538753d5dcf3560567a9
-
+https://qiita.com/hareku/items/dbf0752aa76499a895fd
+https://marsquai.com/745ca65e-e38b-4a8e-8d59-55421be50f7e/1f67fdab-8e00-4ae1-a1b9-077d5a30a5d6/3bb0733e-b978-4ee7-a667-d864c74cb944/
+https://book.yyts.org/handson/tsconfig.json-settings#targethawoshitaraiika
+https://gist.github.com/azu/56a0411d69e2fc333d545bfe57933d07
 
 # memo
 
@@ -137,4 +139,7 @@ index.html,compute_hash.js,main.jsをindexコンテナ等に移して実行で�
 ReferenceError: require is not defined
 でjavascriptが動かない。
 
-それにしても、indexがコンテナで動かない理由は不明。。。
+⇒esconfigのmoduleをes2020にしたらできた。
+
+それにしても、indexがコンテナで動かない理由は不明。ここを解決する。
+そのあとはmain.jsもtsにしてしまう。
