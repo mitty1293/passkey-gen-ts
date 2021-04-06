@@ -142,4 +142,5 @@ ReferenceError: require is not defined
 ⇒esconfigのmoduleをes2020にしたらできた。
 
 それにしても、indexがコンテナで動かない理由は不明。ここを解決する。
+アパッチ起動してないことが原因だったけどなぜ？
 そのあとはmain.jsもtsにしてしまう。
