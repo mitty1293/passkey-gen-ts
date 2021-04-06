@@ -131,3 +131,8 @@ docker build -t passkey-gen-ts .
 
 # 今後
 そのあとはmain.jsもtsにしてしまう。
+
+# TypescriptでのDOM取得
+https://confrage.jp/typescript%E3%81%A7dom%E8%A6%81%E7%B4%A0%E3%82%92%E4%BD%9C%E6%88%90%E3%81%99%E3%82%8B/
+
+https://developer.mozilla.org/ja/docs/Web/HTML/Element
