@@ -109,38 +109,25 @@ https://marsquai.com/745ca65e-e38b-4a8e-8d59-55421be50f7e/1f67fdab-8e00-4ae1-a1b
 https://book.yyts.org/handson/tsconfig.json-settings#targethawoshitaraiika
 https://gist.github.com/azu/56a0411d69e2fc333d545bfe57933d07
 
-# memo
-
-以下見ながらdockerfileに落とし込む
-
+# Dockerfileの参考
 https://future-architect.github.io/typescript-guide/deploy.html#docker
 
 https://future-architect.github.io/typescript-guide/ecosystem.html
 
-## テスト用（test.js　sha256のjsと同じdistディレクトリに入れる）
-`node test.js 文字列`で実行
+# 起動
+## イメージビルド
 ```
-const aaa = require('./hash');
-console.log(aaa.computeHash(process.argv[2]));
+docker build -t passkey-gen-ts .
 ```
 
-
-# テスト結果
+## コンテナ起動
 ```
-root@281e11ffea5b:/usr/local/apache2/htdocs# ls
-dist  index.html
-root@281e11ffea5b:/usr/local/apache2/htdocs# cd dist
-root@281e11ffea5b:/usr/local/apache2/htdocs/dist# ls
-compute_hash.js  compute_hash.js.map  main.js
+# docker run -itd -p 8004:80 --name passkey-gen-ts passkey-gen-ts
 ```
-何故かこれでできない。
-index.html,compute_hash.js,main.jsをindexコンテナ等に移して実行できるか試す。
-⇒indexの表示はされた。
-ReferenceError: require is not defined
-でjavascriptが動かない。
+`-d` : バックグラウンドでの起動<br>
+コマンド最後に`/bin/bash`等入れない事。<br>
+本来は`httpd-foreground`コマンドが実行されてapacheが起動するが、<br>
+別コマンドを入れると上書きされてしまいapacheが起動しなくなる。
 
-⇒esconfigのmoduleをes2020にしたらできた。
-
-それにしても、indexがコンテナで動かない理由は不明。ここを解決する。
-アパッチ起動してないことが原因だったけどなぜ？
+# 今後
 そのあとはmain.jsもtsにしてしまう。
