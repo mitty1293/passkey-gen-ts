@@ -1,5 +1,5 @@
-//import {generate_hash} from './sha256.js';
-const hash = require('./compute_hash');
+import {computeHash} from './compute_hash.js';
+//const hash = require('./compute_hash');
 
 // DOM
 const gen_btn = document.getElementById("gen_btn");
