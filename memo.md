@@ -136,3 +136,5 @@ index.html,compute_hash.js,main.jsをindexコンテナ等に移して実行で�
 ⇒indexの表示はされた。
 ReferenceError: require is not defined
 でjavascriptが動かない。
+
+それにしても、indexがコンテナで動かない理由は不明。。。
