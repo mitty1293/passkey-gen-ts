@@ -9,8 +9,8 @@ const output_txt = document.getElementById("output_data");
 
 // eventlistener
 gen_btn.addEventListener('click', () => {
-    //output_txt.value = generate_hash(input_txt.value);
-    output_txt.value = hash.computeHash(input_txt.value);
+    output_txt.value = computeHash(input_txt.value);
+    //output_txt.value = hash.computeHash(input_txt.value);
 });
 
 copy_btn.addEventListener('click', () => {

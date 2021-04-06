@@ -1,6 +1,3 @@
-"use strict";
-Object.defineProperty(exports, "__esModule", { value: true });
-exports.computeHash = void 0;
 // 文字列を引数にとり、64の倍数bytesのHex文字列を返す
 const padding = (M) => {
     let sizeLastBlock = 64; // Mの末尾のブロックサイズ
@@ -64,7 +61,7 @@ const mapW = (array64, Mi) => {
     return array64;
 };
 // メインの関数
-const computeHash = (M) => {
+export const computeHash = (M) => {
     // ブロックごとにハッシュ値が格納される配列
     const H = [0x6a09e667, 0xbb67ae85, 0x3c6ef372, 0xa54ff53a, 0x510e527f, 0x9b05688c, 0x1f83d9ab, 0x5be0cd19];
     const paddedString = padding(M);
@@ -110,5 +107,4 @@ const computeHash = (M) => {
         throw new Error("Hash result is not 32bytes");
     return result;
 };
-exports.computeHash = computeHash;
 //# sourceMappingURL=compute_hash.js.map
