@@ -1,4 +1,4 @@
-import {computeHash} from './compute_hash';
+import {computeHash} from './compute_hash.js';
 
 // DOM
 const gen_btn: HTMLButtonElement = <HTMLButtonElement>document.getElementById("gen_btn");
