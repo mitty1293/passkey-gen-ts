@@ -20,3 +20,14 @@ passkey-gen-ts
 ├── README.md
 └── tsconfig.json
 ```
+
+# 環境構築
+## イメージビルド
+```
+docker build -t passkey-gen-ts .
+```
+
+## コンテナ起動
+```
+# docker run -itd -p 8004:80 --name passkey-gen-ts passkey-gen-ts
+```
