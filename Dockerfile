@@ -12,3 +12,4 @@ RUN npm run build
 FROM httpd:2.4 AS runner
 COPY --from=builder /app/dist/ /usr/local/apache2/htdocs/dist/
 COPY html/index.html /usr/local/apache2/htdocs/
+COPY html/base.css /usr/local/apache2/htdocs/
