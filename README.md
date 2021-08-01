@@ -5,8 +5,9 @@ sh256を理解する学習目的。
 
 ## Setup
 ```
-$ docker build -t passkey-gen-ts .
-$ docker run -itd -p hostport:80 --name passkey-gen-ts passkey-gen-ts
+$ git clone https://github.com/mitty1293/passkey-gen-ts.git
+$ docker build -t passkey-gen-ts ./passkey-gen-ts/
+$ docker run -itd -p <hostport>:80 --name passkey-gen-ts passkey-gen-ts
 ```
 
 ## References
