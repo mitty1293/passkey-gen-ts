@@ -1,0 +1,19 @@
+services:
+  passkey-gen-ts:
+    build:
+      context: ./
+      dockerfile: Dockerfile
+      target: runner
+    image: passkey-gen-ts
+    container_name: passkey-gen-ts
+    networks:
+      - traefik_reverse_proxy_network
+    labels:
+      - traefik.enable=true
+      - traefik.http.routers.passkey.entrypoints=websecure
+      - traefik.http.routers.passkey.rule=Host(`passkey.${DOMAIN}`)
+      - traefik.http.routers.passkey.tls.certresolver=myresolver
+      - traefik.http.services.passkey.loadbalancer.server.port=80
+networks:
+  traefik_reverse_proxy_network:
+    external: true
